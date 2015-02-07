@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <span style="background-color: <%=@subject.colour%>"><%= @subject.name %></span>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @subject.link %>
+</p>
+
+<%= link_to 'Back', subjects_path %>

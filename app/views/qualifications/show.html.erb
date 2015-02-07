@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<strong>Name:</strong>
+	<%= @qualification.name %>
+</p>
+
+<p>
+	<strong>Country:</strong>
+	<%= @qualification.country %>
+</p>
+
+<p>
+	<strong>Subjects:</strong>
+	<ul>
+		<% @qualification.subjects.each do |subject| %>
+		<li style="background-color: <%=subject.colour%>"><%=subject.name%></li>
+		<% end%>
+	</ul>
+</p>
+
+<%= link_to 'Back', qualifications_path %>
