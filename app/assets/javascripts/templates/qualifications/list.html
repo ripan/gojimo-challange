@@ -1,0 +1,14 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h3 class="panel-title"><a ng-href="#/qualifications/{{qualification.id}}" >{{qualification.name}}</a></h3>
+	</div>
+	<div class="panel-body">
+		<label>Subjects</label>
+		<ul class="list-unstyled li-custom">
+			<li ng-repeat="subject in qualification.subjects" style="background-color: {{subject.colour}}">
+				{{subject.title}}
+			</li>
+		</ul>
+	</div>
+	<div class="panel-footer">{{qualification.updated_at | date : 'medium'}}</div>
+</div>

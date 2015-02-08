@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="gojimoApp">
 	<head>
 		<title>GojimoChallange</title>
-		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= stylesheet_link_tag    'application', media: 'all' %>
+		<%= javascript_include_tag 'application' %>
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
 		<%= render :partial => 'shared/header'%>
 		<div class="container">
 			<%= yield %>
+			<div ng-view class="view-frame"></div>
 		</div>
 		<%= render :partial => 'shared/footer'%>
 	</body>

@@ -1,0 +1,23 @@
+<div ng-controller="QualificationsListController">
+  <div class="row">
+    <div class="col-md-3">
+      <!--Sidebar content-->
+      <h3>Subjects</h3>
+      <ul class="list-unstyled li-custom">
+        <li ng-repeat="(name, properties) in uniqueSubjects" style="background-color: {{properties.colour}}">
+          {{name}}
+        </li>
+      </ul>
+    </div>
+    
+    <div class="col-md-9">
+      <h3>Listing Qualifications</h3>
+      <!--Body content-->
+      <div class="search-form" ng-include="'shared/search_form.html'"></div>
+      <ul class="qualifications list-unstyled li-custom">
+        <h4>{{results.length}} qualifications found </h4>
+        <li ng-repeat="qualification in qualifications | filter:query.keyword | orderBy:query.order as results" ng-include="'qualifications/list.html'"></li>
+      </ul>
+    </div>
+  </div>
+</div>

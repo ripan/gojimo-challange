@@ -1,0 +1,13 @@
+<div ng-controller="SubjectsListController">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Listing Subjects</h3>
+      <!--Body content-->
+      <div class="search-form" ng-include="'shared/search_form.html'"></div>
+      <ul class="subjects list-unstyled li-custom">
+        <h4>{{results.length}} subjects found </h4>
+        <li ng-repeat="subject in subjects | filter:{name:query.keyword} | orderBy:query.order as results" style="background-color: {{subject.colour}}" ng-include="'subjects/list.html'"></li>
+      </ul>
+    </div>
+  </div>
+</div>

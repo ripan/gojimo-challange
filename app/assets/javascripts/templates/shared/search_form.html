@@ -1,0 +1,22 @@
+<div id="search-form">
+  <form>
+    <div class="row">
+      <div class="col-xs-9">
+        <input autofocus="autofocus" class="form-control typeahead" id="search" name="search" placeholder="Enter qualification or subject" type="text" ng-model="query.keyword">
+      </div>
+      <div class="col-xs-3">
+        <select ng-model="query.order" class="form-control">
+          <option value="name">Alphabetical</option>
+          <option value="updated_at">Newest</option>
+        </select>
+      </div>
+    </div>
+  </form>
+
+  <div style="height:20px;">
+    <p class="text-muted" ng-if="query.keyword">
+      <small>I am looking for a {{query.keyword}} order by {{query.order}}</small>
+    </p>
+  </div>
+  
+</div>
