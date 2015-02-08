@@ -22,5 +22,13 @@
 
 $(function() {
 
+	// $('nav .app-view').click(function(event) {
+	// 	$('.app-view').hide()
+	// 	if($(this).hasClass('rails-view')){
+	// 		$('.angular-view').show();
+	// 	}else{
+	// 		$('.rails-view').show();
+	// 	}
+	// });
 
 }); //end function

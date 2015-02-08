@@ -1,19 +1,23 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      </button>
-      <%=link_to 'Gojimo Challange',  root_url, :class=>"navbar-brand"%>
+<div ng-controller="HeaderController">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <%=link_to 'Gojimo Challange',  root_url, :class=>"navbar-brand"%>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <%=link_to_acive 'Qualifications',  qualifications_url%>
+          <%=link_to_acive 'Subjects',  subjects_url%>
+          <li><a ng-href="#/qualifications" ng-click="hideRailsView()">Qualifications (Angular View)</a></li>
+          <li><a ng-href="#/subjects" ng-click="hideRailsView()">Subjects (Angular View)</a></li>
+        </ul>
+      </div>
     </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <%=link_to_acive 'Qualifications',  qualifications_url%>
-        <%=link_to_acive 'Subjects',  subjects_url%>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
+</div>

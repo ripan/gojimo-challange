@@ -9,8 +9,12 @@
 	<body>
 		<%= render :partial => 'shared/header'%>
 		<div class="container">
-			<%= yield %>
-			<div ng-view class="view-frame"></div>
+			<div class="app-view angular-view">
+				<div ng-view class="view-frame"></div>
+			</div>
+			<div class="app-view rails-view">
+				<%= yield %>
+			</div>
 		</div>
 		<%= render :partial => 'shared/footer'%>
 	</body>
