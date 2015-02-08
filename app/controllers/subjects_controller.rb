@@ -5,11 +5,14 @@ class SubjectsController < ApplicationController
   # GET /subjects.json
   def index
     @subjects = Subject.find(:all)
+    expires_in 10.minute, public: true
   end
 
   # GET /subjects/1
   # GET /subjects/1.json
   def show
+    expires_in 10.minutes, public: true
+    fresh_when etag: @subject
   end
 
   # GET /subjects/new

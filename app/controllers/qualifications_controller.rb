@@ -5,11 +5,15 @@ class QualificationsController < ApplicationController
   # GET /qualifications.json
   def index
     @qualifications = Qualification.find(:all)
+    expires_in 10.minute, public: true
+    fresh_when last_modified: @qualifications.max_by(&:updated_at).updated_at.to_time
   end
 
   # GET /qualifications/1
   # GET /qualifications/1.json
   def show
+    expires_in 10.minutes, public: true
+    fresh_when etag: @qualification
   end
 
   # GET /qualifications/new

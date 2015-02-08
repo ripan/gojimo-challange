@@ -19,3 +19,8 @@
  body > .container{
  	padding-top: 60px;
  }
+
+ ul.li-custom > li {
+ 	margin-bottom: 5px;
+ 	padding:5px;
+ }
