@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.4'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -42,3 +43,4 @@ group :development, :test do
 end
 
 gem 'activeresource'
+gem 'rails_12factor'
