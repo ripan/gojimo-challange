@@ -45,3 +45,5 @@ end
 gem 'activeresource'
 gem 'rails_12factor'
 gem 'angular-rails-templates'
+gem 'bootstrap-sass'
+
