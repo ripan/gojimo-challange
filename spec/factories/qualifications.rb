@@ -5,6 +5,5 @@ FactoryGirl.define do
     name "Name #{random_number}" 
     country ""
     link "/api/v4/qualifications/d45945e4-b724-48ab-9f99-21e61f1648ad"
-    association :subjects, factory: :subject
   end
 end
